@@ -8,7 +8,7 @@ import './types.dart'
         ParsingReference,
         RegExpChronoMatch;
 import './debugging.dart' show AsyncDebugBlock, DebugHandler;
-import './locales/en/configuration.dart';
+import './locales/ru/configuration.dart';
 
 /// Chrono configuration.
 /// It is simply an ordered list of parsers and refiners
@@ -49,7 +49,7 @@ class ChronoInstance {
   List<Parser> parsers;
   List<Refiner> refiners;
 
-  static const defaultConfig = ENDefaultConfiguration();
+  static const defaultConfig = RUDefaultConfiguration();
 
   ChronoInstance([Configuration? configuration])
       : parsers = (configuration ?? defaultConfig.createCasualConfiguration())

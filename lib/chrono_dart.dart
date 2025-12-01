@@ -2,7 +2,7 @@
 library;
 
 import './src/chrono.dart' show ChronoInstance;
-import './src/locales/en/en.dart' as en;
+import './src/locales/ru/ru.dart' as ru;
 import './src/types.dart' show ParsedResult, ParsingOption, ParsingReference;
 
 export './src/chrono.dart';
@@ -11,10 +11,10 @@ export './src/results.dart';
 
 abstract class Chrono {
   /// A shortcut for {@link en | chrono.en.strict}
-  static final strict = en.strict;
+  static final strict = ru.strict;
 
   /// A shortcut for {@link en | chrono.en.casual}
-  static final casual = en.casual;
+  static final casual = ru.casual;
 
   /// Default instance with en.casual config.
   static final instance = ChronoInstance();
