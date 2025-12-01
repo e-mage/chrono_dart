@@ -20,8 +20,8 @@ It is designed to handle most date/time formats and extract information from any
 * 2014-11-30T08:15:30-05:30
 
 # Usage
-1. Install manually or via pub - `dart pub add chrono_dart`
-2. Simply pass a string to functions Chrono.parseDate or Chrono.parse.
+1. Install manually or via pub - `dart pub add chrono_dart` OR add this git repo into dependencies in file `pubspec.yaml`
+2. Simply pass a string to functions Chrono.parseDate or Chrono.parse. (See more examples in `bin/main.dart`)
 
 ```dart
 import 'package:chrono_dart/chrono_dart.dart' show Chrono;
@@ -38,7 +38,7 @@ Chrono.parse('An appointment on Sep 12');
 }] */
 ```
 
-Only English is supported in this version. Feel free to add PRs with any other languages – the package is designed with extendability in mind.
+Only English and Russian is supported in this version. Feel free to add PRs with any other languages – the package is designed with extendability in mind.
 
 -----------
 Port of Chrono to Dart lang.

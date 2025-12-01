@@ -13,7 +13,7 @@ final _pattern = RegExp(
   // ignore: prefer_interpolation_to_compose_strings, prefer_adjacent_string_concatenation
   "(?:(?:\\,|\\(|\\（)\\s*)?" +
       "(?:в\\s*?)?" +
-      "(?:(эту|этот|прошлый|прошлую|следующий|следующую|следующего)\\s*)?" +
+      "(?:(эту|этот|это|прошлый|прошлую|прошлое|следующий|следующую|следующего|следующее)\\s*)?" +
       "(${matchAnyPattern(WEEKDAY_DICTIONARY)})" +
       "(?:\\s*(?:\\,|\\)|\\）))?" +
       "(?:\\s*на\\s*(этой|прошлой|следующей)\\s*неделе)?" +
@@ -45,11 +45,11 @@ class RUWeekdayParser extends AbstractParserWithWordBoundaryChecking {
     modifierWord = modifierWord.toLowerCase();
 
     String? modifier;
-    if (modifierWord == "прошлый" || modifierWord == "прошлую" || modifierWord == "прошлой") {
+    if (modifierWord == "прошлый" || modifierWord == "прошлую" || modifierWord == "прошлой" || modifierWord == "прошлое") {
       modifier = "last";
-    } else if (modifierWord == "следующий" || modifierWord == "следующую" || modifierWord == "следующей" || modifierWord == "следующего") {
+    } else if (modifierWord == "следующий" || modifierWord == "следующую" || modifierWord == "следующей" || modifierWord == "следующего" || modifierWord == "следующее") {
       modifier = "next";
-    } else if (modifierWord == "этот" || modifierWord == "эту" || modifierWord == "этой") {
+    } else if (modifierWord == "этот" || modifierWord == "эту" || modifierWord == "этой" || modifierWord == "это") {
       modifier = "this";
     }
 
