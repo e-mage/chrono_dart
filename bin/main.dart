@@ -32,6 +32,10 @@ void main() {
   dateOrNull = Chrono.parseDate('29 ноября');
   print ('Parse "29 of November" of the current year: "29 ноября" - $dateOrNull');
 
+  // Parse "29 ноя"
+  dateOrNull = Chrono.parseDate('29 ноя');
+  print ('Parse "29 of Nov" of the current year: "29 ноя" - $dateOrNull');
+
   // Parse "29 ноября 2026"
   dateOrNull = Chrono.parseDate('29 ноября 2026');
   print ('Parse "29 of November 2026" of the current year: "29 ноября 2026" - $dateOrNull');

@@ -13,7 +13,7 @@ final _pattern = RegExp(
   // ignore: prefer_interpolation_to_compose_strings, prefer_adjacent_string_concatenation
   "(?:(?:\\,|\\(|\\（)\\s*)?" +
       "(?:в\\s*?)?" +
-      "(?:(эту|этот|это|прошлый|прошлую|прошлое|следующий|следующую|следующего|следующее)\\s*)?" +
+      "(?:(эту|этот|это|ближайший|ближайшую|ближайшее|прошлый|прошлую|прошлое|следующий|следующую|следующего|следующее)\\s*)?" +
       "(${matchAnyPattern(WEEKDAY_DICTIONARY)})" +
       "(?:\\s*(?:\\,|\\)|\\）))?" +
       "(?:\\s*на\\s*(этой|прошлой|следующей)\\s*неделе)?" +
@@ -49,7 +49,7 @@ class RUWeekdayParser extends AbstractParserWithWordBoundaryChecking {
       modifier = "last";
     } else if (modifierWord == "следующий" || modifierWord == "следующую" || modifierWord == "следующей" || modifierWord == "следующего" || modifierWord == "следующее") {
       modifier = "next";
-    } else if (modifierWord == "этот" || modifierWord == "эту" || modifierWord == "этой" || modifierWord == "это") {
+    } else if (modifierWord == "этот" || modifierWord == "эту" || modifierWord == "этой" || modifierWord == "это" || modifierWord == "ближайший" || modifierWord == "ближайшую" || modifierWord == "ближайшее") {
       modifier = "this";
     }
 
